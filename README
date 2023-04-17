@@ -1,0 +1,60 @@
+Selenium HTML Modifier
+This Python script uses Selenium to interact with a live website, select the 'Creative' option, and modify the maxlength attribute of a textarea element.
+
+Requirements
+Python 3.x
+Selenium library
+Chrome browser
+ChromeDriver
+Installation
+Install Python 3.x from the official website.
+
+Install the Selenium library using pip:
+
+Copy code
+pip install selenium
+Download the appropriate version of ChromeDriver that matches your installed Chrome version. Extract the chromedriver executable and place it in a directory that's in your system's PATH or the same directory as your script.
+
+Usage
+Download the selenium_html_modifier.py script and place it in your desired directory.
+
+Open the script in a text editor and replace the URL and the XPath expressions with the ones that match the elements on the actual website you want to interact with.
+
+Run the script using Python:
+
+Copy code
+python selenium_html_modifier.py
+The script will open a new Chrome window, navigate to the specified URL, select the 'Creative' option, and modify the maxlength attribute of the textarea. Note that the changes made by this script will only affect the local browser session, and will not be permanent or visible to other users.
+
+You can add more interactions with the website within the script as needed.
+
+Customization
+You can customize the script to interact with different websites or modify other elements by following these steps:
+
+Update the url variable in the main function with the target website's URL.
+
+Use your browser's developer tools to inspect the website and identify the elements you want to interact with or modify.
+
+Modify the script to locate the desired elements using Selenium's By module with appropriate strategies such as By.XPATH, By.ID, or By.CSS_SELECTOR.
+
+Use Selenium methods like click() for clicking buttons or links, and send_keys() for entering text in input fields.
+
+To modify attributes or properties of elements, use the execute_script() method to run JavaScript code.
+
+For example, to fill out a form, locate the input fields, and submit the form, you can do the following:
+
+python
+Copy code
+input_field1 = driver.find_element(By.ID, 'input_field1_id')
+input_field1.send_keys('Your text here')
+
+input_field2 = driver.find_element(By.ID, 'input_field2_id')
+input_field2.send_keys('Another text here')
+
+submit_button = driver.find_element(By.ID, 'submit_button_id')
+submit_button.click()
+Additional Resources
+Selenium Python documentation: https://selenium-python.readthedocs.io/
+ChromeDriver: https://sites.google.com/a/chromium.org/chromedriver/
+Mozilla GeckoDriver (for Firefox): https://github.com/mozilla/geckodriver/releases
+Python 3.x: https://www.python.org/downloads/
